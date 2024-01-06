@@ -1,0 +1,197 @@
+:root {
+    --green-color:rgb(105,206,203);
+    --blue-color:rgb(28,40,61);
+    --red-color:rgb(235,71,86);
+    --yellow-color:rgb(246,191,69);
+    --scetion-color:rgb(240,247,250);
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar {
+    background-color:var(--blue-color);
+}
+.navbar .fa-magnifying-glass {
+    color: var(--green-color);
+    border-left: 1px solid var(--green-color);
+}
+.btn {
+    background-color: var(--red-color);
+    color:var(--yellow-color)
+}
+.btn:hover {
+    background-color:var(--yellow-color) !important;
+    color: var(--blue-color) !important;
+}
+.navbar li,
+.navbar .logo {
+    cursor: pointer;
+}
+.navbar ul li:hover,
+.navbar .active {
+    color:var(--green-color)
+}
+@media (max-width:767px) {
+    .nav-ele {
+        background-color: var(--blue-color);
+        flex-direction: column;
+        position: absolute;
+        width:100%;
+        align-items: start !important;
+        justify-content: start !important;
+        left:0;
+        bottom:0;
+        transform: translateY(100%);
+        z-index: 1000;
+        transition: all 0.3s;
+    }
+    .nav-ele li {
+        padding:0.8rem  !important;
+    }
+    .navbar .btn {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+.fa-bars {
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fa-bars.opened {
+    border: 1px solid white;    
+}
+.hidden {
+    display: none;
+}
+/* Landing page */
+.landing-page {
+    height:calc(100vh - 72px);
+    background-color: var(--blue-color);
+}
+.btn {
+    background-color: var(--red-color) !important;
+    color: var(--yellow-color) !important;
+}
+/* features section */
+.title:after {
+    content:"";
+    position: absolute;
+    width:150px;
+    height:2px;
+    background-color: var(--green-color);
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+}
+.features h4 {
+    color:var(--yellow-color)
+}
+.features .icon-holder .first{
+    color:rgb(240,247,250);
+    font-size: 12rem;
+}
+.features .icon-holder .second{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    color:rgb(240,247,250);
+    font-size: 4rem;
+    color: var(--green-color);
+}
+/* our work */
+.our-work {
+    background-color: var(--scetion-color);
+}
+.our-work .image::before {
+    content:attr(data-content);
+    position: absolute;
+    background-color:rgba(0, 255, 255, 0.499);
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    display: grid;
+    place-content: center;
+    width:calc(100% - 0.5rem);
+    height:calc(100% - 0.5rem);
+    top:0.25rem;
+    left: 0.25rem;
+    transform: translateX(calc(-100% - 0.25rem));
+    transition: all 0.3s;
+}
+.our-work .image:hover:before {
+    transform: translateX(0);
+}
+.our-work .active {
+    background-color: var(--red-color);
+    color:var(--yellow-color)
+}
+.our-work li:hover:not(.active) {
+    color:var(--red-color);
+}
+.our-work li {
+    cursor: pointer;
+}
+/* About us */
+/* team */
+.team {
+    background-color: var(--scetion-color);
+}
+.team h3 {
+    color:var(--yellow-color)
+}
+.team .row h3{
+    background-color: var(--green-color);
+}
+/* logo */
+/* start project  */
+.start-project {
+    background-color: var(--blue-color);
+}
+/* blog */
+/* Newsletter */
+.newsletter {
+    background-color: var(--yellow-color);
+}
+.newsletter button {
+    background-color: var(--blue-color);
+    color: var(--yellow-color);
+
+}
+.newsletter input[type="email"] {
+    border-bottom: 1px solid white !important;
+}
+.newsletter input[type="email"]:focus {
+    outline: none;
+}
+.newsletter input[type="email"]::placeholder {
+    color:white;
+}
+/* footer */
+.footer {
+    background-color: var(--blue-color);
+}
+.footer li {
+    margin-bottom: 5px;
+}
+.facebook ,
+.twitter,
+.linkedin,
+.ytb{
+    width:35px;
+    height:35px;
+    font-size: 22px; 
+    cursor: pointer;  
+}
+.facebook {
+    background-color: #1877f2;
+}
+.ytb {
+    background-color: #ff0000;
+}
+.linkedin {
+    background-color:#0a66c2;
+}
+.twitter {
+    background-color:#1da1f2;
+}
